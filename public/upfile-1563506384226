@@ -1,0 +1,32 @@
+câu 1:
+SELECT 
+	Substring(productDescription, 1, 50)  
+	AS "Title of products" 
+	FROM `products`
+
+Câu 2:
+
+SELECT 
+	CONCAT(firstName, " " ,lastName, ',' , jobTitle) 
+	AS "EmployeesDecription" 
+	FROM `employees`
+
+Câu 3:
+Update employees
+	set jobTitle = REPLACE(jobTitle, "Sales Rep", "Sales Representative") 
+	
+Câu 4:
+
+SELECT 	* 
+	DATEDIFF(requiredDate,shippedDate) 
+	as time 
+	FROM orders 
+	ORDER By time DESC 
+	limit 5 
+
+câu 5:
+Select * 
+	FROM orders 
+	WHERE Month(orderDate) = 05 
+	AND Year(orderDate) = 2005
+	AND shippedDate is null
